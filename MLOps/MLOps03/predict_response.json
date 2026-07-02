@@ -1,0 +1,79 @@
+{
+  "project": "mercurial-ruler-498910-f8",
+  "location": "asia-northeast3",
+  "endpoint": "projects/829311465833/locations/asia-northeast3/endpoints/2517699108676829184",
+  "deployed_model_id": "7327877762243362816",
+  "machine_type": "n1-standard-2 (CPU, no accelerator)",
+  "request": {
+    "instances": [
+      {
+        "user_id": 6,
+        "top_k": 5
+      },
+      {
+        "user_id": 999999999,
+        "top_k": 5
+      }
+    ]
+  },
+  "response": {
+    "predictions": [
+      {
+        "user_id": 6.0,
+        "recommendations": [
+          {
+            "movie_id": 7230.0,
+            "score": 4.6189
+          },
+          {
+            "movie_id": 7057.0,
+            "score": 4.573
+          },
+          {
+            "movie_id": 3456.0,
+            "score": 4.5699
+          },
+          {
+            "movie_id": 2102.0,
+            "score": 4.4761
+          },
+          {
+            "movie_id": 5582.0,
+            "score": 4.4331
+          }
+        ],
+        "known_user": true
+      },
+      {
+        "user_id": 999999999.0,
+        "recommendations": [
+          {
+            "movie_id": 7230.0,
+            "score": 4.7178
+          },
+          {
+            "movie_id": 7057.0,
+            "score": 4.7018
+          },
+          {
+            "movie_id": 3456.0,
+            "score": 4.6701
+          },
+          {
+            "movie_id": 2102.0,
+            "score": 4.5792
+          },
+          {
+            "movie_id": 5582.0,
+            "score": 4.5303
+          }
+        ],
+        "known_user": false
+      }
+    ],
+    "deployed_model_id": "7327877762243362816",
+    "model_resource_name": "projects/829311465833/locations/asia-northeast3/models/8128992929357234176"
+  },
+  "predict_url": "https://asia-northeast3-aiplatform.googleapis.com/v1/projects/829311465833/locations/asia-northeast3/endpoints/2517699108676829184:predict",
+  "curl_example": "curl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  https://asia-northeast3-aiplatform.googleapis.com/v1/projects/829311465833/locations/asia-northeast3/endpoints/2517699108676829184:predict \\\n  -d '{\"instances\": [{\"user_id\": 6, \"top_k\": 5}, {\"user_id\": 999999999, \"top_k\": 5}]}'"
+}
